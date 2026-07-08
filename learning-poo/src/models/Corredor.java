@@ -1,10 +1,13 @@
 package models;
 
-public class Corredor {
+public class Corredor extends Atleta {
 
-    //Um corredor faz atividade, e um ciclista também. Por que são métodos individuais?
-    public void fazerAtividade() {
-        System.out.println(getNome() + " está correndo na pista de atletismo."); //Ué, um corredor sem nome?
+    public Corredor(String nome, int idade, double peso, double altura) {
+        super(nome, idade, peso, altura);
     }
 
+    @Override
+    public void fazerAtividade() {
+        System.out.println("O corredor " + getNome() + " está correndo na pista de atletismo.");
+    }
 }

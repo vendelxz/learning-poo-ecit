@@ -1,10 +1,13 @@
 package models;
 
-public class Ciclista {
+public class Ciclista extends Atleta {
 
-    //Duplicação...HEHEHEH
-    public void fazerAtividade() {
-        System.out.println(getNome() + " está pedalando a sua bicicleta."); //Cadê o Nome???
+    public Ciclista(String nome, int idade, double peso, double altura) {
+        super(nome, idade, peso, altura);
     }
 
+    @Override
+    public void fazerAtividade() {
+        System.out.println("O ciclista " + getNome() + " está pedalando a sua bicicleta.");
+    }
 }
